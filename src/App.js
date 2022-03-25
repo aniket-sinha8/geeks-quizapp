@@ -30,12 +30,12 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Quiz App</h1>
+      <h1><i>Quiz Time</i></h1>
       <div className='quiz-arena'>
         {showScore ? (
           <div className='score-arena'>
             <h2>Your score is {score} out of {Questions.length}!!</h2>
-            <Button color='success' variant="contained" onClick={restart}>Restart</Button>
+            <Button style={{backgroundColor: "#6a5adf"}} variant="contained" onClick={restart}>Restart</Button>
           </div>
         ) : (
           <div>
@@ -49,7 +49,7 @@ function App() {
             <div className='answer-arena'>
               {Questions[currentQuestion].options.map((option) => (
                 <span className='button' onClick={() => handleClick(option.isCorrect)}>
-                  <Button color='success' variant="outlined">{option.answer}</Button>
+                  <Button style={{backgroundColor: "#6a5adf"}} variant="contained">{option.answer}</Button>
                 </span>
               ))}
             </div>
